@@ -4,17 +4,17 @@
       <BossSidebar/>
     </el-aside>
     <el-main>
-      <StaffAccount/>
+      <ServiceDepartStaffInfoTable/>
     </el-main>
   </el-container>
 </template>
 
 <script>
-import StaffAccount from "@/components/StaffAccount";
+import ServiceDepartStaffInfoTable from "@/components/InfoTable/ServiceDepartStaffInfoTable";
 import BossSidebar from "@/components/UniversalComponent/BossSidebar";
 export default {
-  name: "AccountView",
-  components: {StaffAccount,BossSidebar}
+  name: "StaffInfoView",
+  components: {ServiceDepartStaffInfoTable,BossSidebar}
 }
 </script>
 

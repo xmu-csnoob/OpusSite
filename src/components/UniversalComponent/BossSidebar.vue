@@ -5,15 +5,13 @@
         <el-submenu index="1">
           <template #title>员工管理</template>
           <el-menu-item index="/staff" onclick="">所有员工</el-menu-item>
-          <el-menu-item index="1-2">人事部门</el-menu-item>
-          <el-menu-item index="1-3">后勤部门</el-menu-item>
-          <el-menu-item index="1-4">服务部门</el-menu-item>
+          <el-menu-item index="/staff/employ">人事部门</el-menu-item>
+          <el-menu-item index="/staff/logistics">后勤部门</el-menu-item>
+          <el-menu-item index="/staff/service">服务部门</el-menu-item>
         </el-submenu>
         <el-submenu index="2">
           <template #title>权限管理</template>
           <el-menu-item index="2-1">查看员工权限</el-menu-item>
-          <el-menu-item index="2-2">赋予权限</el-menu-item>
-          <el-menu-item index="2-3">撤回权限</el-menu-item>
         </el-submenu>
         <el-submenu index="3">
           <template #title>业绩分析</template>

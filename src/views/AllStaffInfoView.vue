@@ -4,17 +4,17 @@
       <BossSidebar/>
     </el-aside>
     <el-main>
-      <StaffInfoTable/>
+      <AllStaffInfoTable/>
     </el-main>
   </el-container>
 </template>
 
 <script>
-import StaffInfoTable from "@/components/StaffInfoTable";
-import BossSidebar from "@/components/BossSidebar";
+import AllStaffInfoTable from "@/components/InfoTable/AllStaffInfoTable";
+import BossSidebar from "@/components/UniversalComponent/BossSidebar";
 export default {
   name: "StaffInfoView",
-  components: {StaffInfoTable,BossSidebar}
+  components: {AllStaffInfoTable,BossSidebar}
 }
 </script>
 

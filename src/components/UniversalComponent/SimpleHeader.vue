@@ -1,6 +1,6 @@
 <template>
   <el-header>
-    <img src="../assets/logo.png" alt="LOGO" class="logo" style="height:40px;margin-top: 10px;display: inline;float: left">
+    <img src="../../assets/logo.png" alt="LOGO" class="logo" style="height:40px;margin-top: 10px;display: inline;float: left">
     <p style="display: inline;font-size: 30px">We Want Eyes Brighter 酒店管理系统</p>
     <div class="navs" style="display: inline;float: right">
       <router-link to="/">主页</router-link> |

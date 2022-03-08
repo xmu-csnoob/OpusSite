@@ -45,7 +45,7 @@ nav {
 }
 </style>
 <script>
-import SimpleHeader from "@/components/SimpleHeader";
+import SimpleHeader from "@/components/UniversalComponent/SimpleHeader";
 export default {
   components: {SimpleHeader}
 }

@@ -17,11 +17,11 @@
 
 <script>
 import axios from "axios";
-
 export default {
   name: "LoginWindow",
   data() {
     return {
+      ip:'',
       form: {
         username: "",
         password: ""
@@ -39,8 +39,11 @@ export default {
       axios.post('http://localhost:8012/staff/login',data)
       .then((res)=>{
               console.log(res);
-              if(res.data.data===true)
+              if(res.data.data.success===true)
+              {
                 this.$router.push("/");
+                localStorage.setItem('token',res.data.data.token)
+              }
               else
                 alert("登陆失败");
           }
