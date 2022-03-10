@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     getInfo(currentPage){
-      axios.get("http://localhost:8012/staff/depart/1",{
+      axios.get("http://121.37.149.40:8012/staff/depart/1",{
         params:{
           pageNum :currentPage,
           pageSize:this.pageSize
@@ -53,7 +53,7 @@ export default {
       )
     },
     handleCurrentChange(currentPage){
-      axios.get("http://localhost:8012/staff/depart/1",{
+      axios.get("http://121.37.149.40:8012/staff/depart/1",{
         params:{
           pageNum :currentPage,
           pageSize:this.pageSize

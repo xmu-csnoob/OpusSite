@@ -36,7 +36,7 @@ export default {
         "username":username,
         "password":password
       }
-      axios.post('http://localhost:8012/staff/login',data)
+      axios.post('http://121.37.149.40:8012/staff/login',data)
       .then((res)=>{
               console.log(res);
               if(res.data.data.success===true)

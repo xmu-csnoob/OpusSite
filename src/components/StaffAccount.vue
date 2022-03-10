@@ -21,7 +21,7 @@ export default {
     }
   },
   created() {
-    axios.get("http://localhost:8012/staff/info")
+    axios.get("http://121.37.149.40:8012/staff/info")
         .then((res)=>{
               console.log(res);
               this.tableData=res.data.data;
