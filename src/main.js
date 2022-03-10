@@ -18,7 +18,8 @@ axios.interceptors.request.use(config => {
     // 将登陆时存储在浏览器sessionStorage中的token值放入请求头中
     config.headers.token = localStorage.getItem('token');
     return config;
-
 })
+localStorage.setItem("GaoDeKey","1717bf7627a73ea0200419e327d78e82");
+
 
 

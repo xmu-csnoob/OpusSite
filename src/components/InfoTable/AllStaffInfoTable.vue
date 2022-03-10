@@ -1,4 +1,7 @@
 <template>
+  <div class="tableHeader">
+    <p style="color:#FFFFCC;font-size: 25px">所有员工信息表</p>
+  </div>
   <el-table :data="tableData" border stripe>
     <el-table-column prop="id" label="员工号"> </el-table-column>
     <el-table-column prop="name" label="姓名"> </el-table-column>
@@ -24,7 +27,7 @@ export default {
   data() {
     return {
       total:0,
-      pageSize:10,
+      pageSize:5,
       currentPage:1,
       tableData: [
       ],
@@ -51,8 +54,6 @@ export default {
             }
             this.total=Number(res.data.data.pages)*10;
             this.tableData=res.data.data.list;
-            console.log(this.tableData);
-            console.log(this.total);
           }
       )
     },
@@ -66,8 +67,6 @@ export default {
       then((res)=>{
             this.total=Number(res.data.data.pages)*10;
             this.tableData=res.data.data.list;
-            console.log(this.tableData);
-            console.log(this.total);
           }
       )
     }

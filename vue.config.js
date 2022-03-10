@@ -4,12 +4,20 @@ module.exports = defineConfig({
   configureWebpack: {
     devServer: {
       proxy: {
-        '/proxy': {
-          target: 'http://127.0.0.1:8012/',
+        '/city': {
+          target: 'https://restapi.amap.com/v3/ip',
           changeOrigin: true,//改变源
           ws: true,//跨域
           pathRewrite: {
-            '^/proxy':''
+            '^/city':''
+          }
+        },
+        '/weather': {
+          target: 'https://restapi.amap.com/v3/weather/weatherInfo',
+          changeOrigin: true,//改变源
+          ws: true,//跨域
+          pathRewrite: {
+            '^/weather':''
           }
         }
       }

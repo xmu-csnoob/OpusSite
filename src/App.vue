@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-      <img src="../src/assets/fallen.png" style="width: 100%;height: 100%"/>
+      <img src="../src/assets/background.jpg" style="width: 100%;height: 100%"/>
   </div>
   <div class="front">
     <SimpleHeader/>

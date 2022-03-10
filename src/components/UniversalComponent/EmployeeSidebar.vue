@@ -1,15 +1,10 @@
 <template>
   <el-aside>
-    <el-menu class="el-menu-demo" :default-openeds="['1','2','3']"
+    <el-menu class="el-menu-demo" :default-openeds="['1','3']"
              :default-active="this.$router.path" router>
       <el-submenu index="1">
         <template #title>业绩分析</template>
         <el-menu-item index="1-1">查看我的业绩</el-menu-item>
-      </el-submenu>
-      <el-submenu index="2">
-        <template #title>消息中心</template>
-        <el-menu-item index="2-1">查看消息</el-menu-item>
-        <el-menu-item index="2-2">发送消息</el-menu-item>
       </el-submenu>
       <el-submenu index="3">
         <template #title>账户中心</template>
@@ -31,14 +26,18 @@ export default {
 
 <style scoped>
 .el-aside{
-  height:100vh;
+  height:150vh;
+}
+.title{
+  color:white;
 }
 .el-submenu{
-  background: #99CCFF;
+  background: #FFFFCC;
 }
 .el-menu-item{
-  background: #FFFFFF;
+  background: #660066;
   border-width: 20px;
   border-color: black;
+  color:#FFFFFF;
 }
 </style>

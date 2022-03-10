@@ -1,4 +1,7 @@
 <template>
+  <div class="tableHeader">
+    <p style="color:#FFFFCC;font-size: 25px">人事部门员工信息表</p>
+  </div>
   <el-table :data="tableData" border stripe>
     <el-table-column prop="id" label="员工号"> </el-table-column>
     <el-table-column prop="name" label="姓名"> </el-table-column>

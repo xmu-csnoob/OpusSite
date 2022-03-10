@@ -7,26 +7,29 @@
       <EmployeeSidebar v-if="level===1"/>
     </el-aside>
     <el-main>
-      <AllStaffInfoTable/>
+      <HomeGreeting/>
     </el-main>
   </el-container>
 </template>
 
 <script>
-import AllStaffInfoTable from "@/components/InfoTable/AllStaffInfoTable";
+// @ is an alias to /src
+
 import BossSidebar from "@/components/UniversalComponent/BossSidebar";
+import HomeGreeting from "@/components/HomeGreeting";
 import axios from "axios";
-import EmployeeSidebar from "@/components/UniversalComponent/EmployeeSidebar";
-import ManagerSidebar from "@/components/UniversalComponent/ManagerSidebar";
 import GeneralManagerSidebar from "@/components/UniversalComponent/GeneralManagerSidebar";
+import ManagerSidebar from "@/components/UniversalComponent/ManagerSidebar";
+import EmployeeSidebar from "@/components/UniversalComponent/EmployeeSidebar";
+
 export default {
-  name: "StaffInfoView",
+  name: 'HomeView',
   components: {
     EmployeeSidebar,
     ManagerSidebar,
     GeneralManagerSidebar,
-    BossSidebar,
-    AllStaffInfoTable
+    HomeGreeting,
+    BossSidebar
   },
   data(){
     return{
@@ -45,7 +48,6 @@ export default {
   }
 }
 </script>
-
 <style scoped>
 
 </style>
