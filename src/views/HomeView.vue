@@ -1,53 +1,63 @@
 <template>
-  <el-container>
-    <el-aside>
-      <BossSidebar v-if="level===4"/>
-      <GeneralManagerSidebar v-if="level===3"/>
-      <ManagerSidebar v-if="level===2"/>
-      <EmployeeSidebar v-if="level===1"/>
-    </el-aside>
-    <el-main>
-      <HomeGreeting/>
-    </el-main>
-  </el-container>
+  <div class="background">
+    <div class="empty"/>
+    <div class="introduction">
+      <span>Opus  一个图像素材分享网站</span>
+    </div>
+    <div class="search">
+      <el-input placeholder="搜索图片..." v-model="keyWord"/>
+    </div>
+  </div>
+  <div class="image">
+    <MainPageImageTable/>
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
-
-import BossSidebar from "@/components/UniversalComponent/BossSidebar";
-import HomeGreeting from "@/components/HomeGreeting";
-import axios from "axios";
-import GeneralManagerSidebar from "@/components/UniversalComponent/GeneralManagerSidebar";
-import ManagerSidebar from "@/components/UniversalComponent/ManagerSidebar";
-import EmployeeSidebar from "@/components/UniversalComponent/EmployeeSidebar";
+import MainPageImageTable from "@/components/ImageTable/MainPageImageTable";
 
 export default {
   name: 'HomeView',
   components: {
-    EmployeeSidebar,
-    ManagerSidebar,
-    GeneralManagerSidebar,
-    HomeGreeting,
-    BossSidebar
+    MainPageImageTable,
   },
   data(){
     return{
-      username:'',
-      level:''
+      keyWord:""
     }
   },
-  created() {
-    axios.get("http://121.37.149.40:8012/staff/info")
-        .then((res)=>{
-              this.username=res.data.data.username;
-              this.level=res.data.data.level;
-              console.log(this.level);
-            }
-        )
-  }
+  created() {//需要在created中就直接挂好
+    const that=this;
+    document.onkeydown = function () {
+      const key = window.event.keyCode
+      if (key === 13) {//13是键盘上enter的映射
+        that.$router.push("search?keyword="+that.keyWord)
+      }
+    }
+  },
 }
 </script>
 <style scoped>
-
+.image{
+  width: 100%;
+  height: 100%;
+}
+.background{
+  background: url("../assets/searchBuffer.jpg")no-repeat;
+  background-size: 100%,100%;
+  height: 480px;
+}
+.empty{
+  height: 30%;
+}
+.introduction{
+  font-size: 40px;
+  margin-left: 35%;
+}
+.search{
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 5%;
+}
 </style>
