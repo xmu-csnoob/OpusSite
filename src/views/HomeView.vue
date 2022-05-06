@@ -2,7 +2,7 @@
   <div class="background">
     <div class="empty"/>
     <div class="introduction">
-      <span>Opus  一个图像素材分享网站</span>
+      Opus  一个图像素材分享网站
     </div>
     <div class="search">
       <el-input placeholder="搜索图片..." v-model="keyWord"/>
@@ -15,7 +15,7 @@
 
 <script>
 // @ is an alias to /src
-import MainPageImageTable from "@/components/ImageTable/MainPageImageTable";
+import MainPageImageTable from "@/components/image/ImageTable/MainPageImageTable";
 
 export default {
   name: 'HomeView',

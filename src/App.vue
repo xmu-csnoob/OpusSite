@@ -1,14 +1,11 @@
 <template>
   <el-container>
     <el-header>
-      <NonLoginHeader/>
+      <NonLoginHeader :key="new Date().getTime()"/>
     </el-header>
-    <div>
-      <router-view/>
-    </div>
+    <router-view :key="new Date().getTime()"/>
   </el-container>
 </template>
-
 <style lang="scss">
 .el-container{
   width: 100%;
@@ -18,6 +15,7 @@
 <script>
 import NonLoginHeader from "@/components/layout/NonLoginHeader";
 export default {
-  components: {NonLoginHeader}
+  components: {NonLoginHeader},
+
 }
 </script>

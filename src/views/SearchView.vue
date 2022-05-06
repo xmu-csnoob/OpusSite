@@ -2,14 +2,16 @@
   <div class="search">
     <el-input placeholder="搜索图片..." v-model="keyword"/>
   </div>
+  <div>
+    <span style="font-size: 30px;font-weight: bold">对于 {{this.$route.query.keyword}} 的搜索结果如下，</span>
+  </div>
   <div class="image">
     <KeywordImageTable son :keyword="$route.query.keyword"/>
   </div>
 </template>
 
 <script>
-import KeywordImageTable from "@/components/ImageTable/KeywordImageTable";
-import axios from "axios";
+import KeywordImageTable from "@/components/image/ImageTable/KeywordImageTable";
 import router from "@/router";
 export default {
   name: "SearchView",
@@ -21,11 +23,6 @@ export default {
     }
   },
   created() {
-    let keyword=this.$route.query.keyword
-    axios.get("http://localhost:12138/artwork?page=1&pageSize=10&word="+keyword)
-    .then((response)=>{
-      console.log(response)
-    })
     const that=this;
     document.onkeydown = function () {
       const key = window.event.keyCode
