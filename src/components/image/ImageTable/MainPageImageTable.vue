@@ -38,12 +38,12 @@ export default {
   }
   ,
   created() {
-    axios.get("http://43.138.12.177:12138/artwork/users/0?page=1&pageSize=8")
+    axios.get("http://localhost:12138/artwork/users/0?page=1&pageSize=15")
         .then((response)=>{
           let data=response.data
           let list=data.data.list
           for (let i=0; i<list.length; i++){
-            axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+            axios.get("http://localhost:12100/image/" +list[i].imageId)
                 .then((response)=>{
                   let d=response.data
                   let url=d.data.url;
@@ -55,12 +55,12 @@ export default {
                 })
           }
         })
-    axios.get("http://43.138.12.177:12138/artwork/users/0?page=2&pageSize=8")
+    axios.get("http://localhost:12138/artwork/users/0?page=2&pageSize=15")
         .then((response)=>{
           let data=response.data
           let list=data.data.list
           for (let i=0; i<list.length; i++){
-            axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+            axios.get("http://localhost:12100/image/" +list[i].imageId)
                 .then((response)=>{
                   let d=response.data
                   let url=d.data.url;
@@ -72,12 +72,12 @@ export default {
                 })
           }
         })
-    axios.get("http://43.138.12.177:12138/artwork/users/0?page=3&pageSize=8")
+    axios.get("http://localhost:12138/artwork/users/0?page=3&pageSize=15")
         .then((response)=>{
           let data=response.data
           let list=data.data.list
           for (let i=0; i<list.length; i++){
-            axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+            axios.get("http://localhost:12100/image/" +list[i].imageId)
                 .then((response)=>{
                   let d=response.data
                   let url=d.data.url;

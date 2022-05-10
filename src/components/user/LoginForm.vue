@@ -23,6 +23,7 @@
 <script>
 import {reactive} from "vue";
 import axios from "axios";
+import router from "@/router";
 
 export default {
   name: "LoginForm",
@@ -36,15 +37,14 @@ export default {
   },
   methods:{
     login:function (){
-      axios.post("http://43.138.12.177:12345/login",this.form)
+      axios.post("http://localhost:12345/login",this.form)
       .then((response)=>{
-        console.log(response);
         const state=response.data.data.state;
         const token=response.data.data.token;
         if(state===true){
           localStorage.setItem("login_state",true);
           localStorage.setItem("token",token);
-          this.$router.push("/")
+          router.push("/home")
         }
       })
     }

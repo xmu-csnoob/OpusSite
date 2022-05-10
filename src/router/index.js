@@ -5,9 +5,14 @@ import ArtworkView from "@/views/ArtworkView";
 import ArtworkPostView from "@/views/ArtworkPostView";
 import LoginView from "@/views/LoginView";
 import RegisterView from "@/views/RegisterView";
+import UserMainPageView from "@/views/UserMainPageView";
 const routes = [
   {
     path:'/',
+    redirect:'/login'
+  },
+  {
+    path:'/home',
     name:'Home',
     component: HomeView
   },
@@ -36,6 +41,11 @@ const routes = [
     name:'Register',
     component: RegisterView
   },
+  {
+    path:'/user',
+    name:'User',
+    component: UserMainPageView
+  }
 ]
 
 const router = createRouter({

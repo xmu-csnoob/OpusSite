@@ -52,8 +52,8 @@ export default {
       const blob=new Blob([json],{type:"application/json"});
       formData.set("Category",blob);
       formData.set("Introduction",this.form.introduction)
-      //43.138.12.177:12138
-      axios.post("http://43.138.12.177:12138/artwork/",formData)
+      //localhost:12138
+      axios.post("http://localhost:12138/artwork/",formData)
       .then((response)=>{
         const returnNo=response.data.returnNo;
         console.log(returnNo)
@@ -68,7 +68,7 @@ export default {
     }
   },
   created() {
-    axios.get("http://43.138.12.177:12101/category")
+    axios.get("http://localhost:12101/category")
         .then((response)=>{
           console.log(response)
           this.category=response.data.data;

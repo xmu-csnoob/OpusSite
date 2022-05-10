@@ -6,9 +6,12 @@ import ElementPlus from 'element-plus'
 import 'element-plus/lib/theme-chalk/index.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+
+import Vuex from 'vuex'
 axios.defaults.timeout = 50000
 const app = createApp(App).use(router)
 installElementPlus(app)
+app.use(Vuex)
 app.use(ElementPlus);
 app.use(VueAxios,axios);
 app.mount('#app')

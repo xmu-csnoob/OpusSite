@@ -34,23 +34,23 @@ export default {
   },
   created() {
     this.artworkId=this.$route.query.id
-    axios.get("http://43.138.12.177:12138/artwork/"+this.artworkId)
+    axios.get("http://localhost:12138/artwork/"+this.artworkId)
         .then((response)=>{
           console.log(response);
           this.artwork=response.data.data;
           this.userId=response.data.data.userId;
           this.imageId=this.artwork.imageId
           let imageId=this.imageId;
-          axios.get("http://43.138.12.177:12100/image/"+imageId)
+          axios.get("http://localhost:12100/image/"+imageId)
               .then((response)=>{
                 this.url=response.data.data.url;
               })
-          axios.get("http://43.138.12.177:12345/user/"+this.userId)
+          axios.get("http://localhost:12345/user/"+this.userId)
               .then((response)=>{
                 this.username=response.data.data.name;
               })
         })
-    axios.get("http://43.138.12.177:12101/category/artwork/"+this.artworkId)
+    axios.get("http://localhost:12101/category/artwork/"+this.artworkId)
         .then((response)=>{
           this.category=response.data.data;
         })

@@ -69,13 +69,13 @@ export default {
   ,
   created() {
     let keyword=this.keyword;
-    axios.get("http://43.138.12.177:12138/artwork?page=1&pageSize=24&word="+keyword)
+    axios.get("http://localhost:12138/artwork?page=1&pageSize=24&word="+keyword)
         .then((response)=>{
           let data=response.data
           let list=data.data.list
           for (let i=0; i<list.length; i++){
             if(i>=0&&i<3){
-              axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+              axios.get("http://localhost:12100/image/" +list[i].imageId)
                   .then((response)=>{
                     let d=response.data
                     let url=d.data.url;
@@ -86,7 +86,7 @@ export default {
                     this.urlList.push(url)
                   })
             }else if(i>=3&&i<6){
-              axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+              axios.get("http://localhost:12100/image/" +list[i].imageId)
                   .then((response)=>{
                     let d=response.data
                     let url=d.data.url;
@@ -97,7 +97,7 @@ export default {
                     this.urlList.push(url)
                   })
             }else if(i>=6&&i<9){
-              axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+              axios.get("http://localhost:12100/image/" +list[i].imageId)
                   .then((response)=>{
                     let d=response.data
                     let url=d.data.url;
@@ -108,7 +108,7 @@ export default {
                     this.urlList.push(url)
                   })
             }else if(i>=9&&i<12){
-              axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+              axios.get("http://localhost:12100/image/" +list[i].imageId)
                   .then((response)=>{
                     let d=response.data
                     let url=d.data.url;
@@ -119,7 +119,7 @@ export default {
                     this.urlList.push(url)
                   })
             }else if(i>=12&&i<15){
-              axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+              axios.get("http://localhost:12100/image/" +list[i].imageId)
                   .then((response)=>{
                     let d=response.data
                     let url=d.data.url;
@@ -130,7 +130,7 @@ export default {
                     this.urlList.push(url)
                   })
             }else if(i>=15&&i<18){
-              axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+              axios.get("http://localhost:12100/image/" +list[i].imageId)
                   .then((response)=>{
                     let d=response.data
                     let url=d.data.url;
@@ -141,7 +141,7 @@ export default {
                     this.urlList.push(url)
                   })
             }else if(i>=18&&i<21){
-              axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+              axios.get("http://localhost:12100/image/" +list[i].imageId)
                   .then((response)=>{
                     let d=response.data
                     let url=d.data.url;
@@ -152,7 +152,7 @@ export default {
                     this.urlList.push(url)
                   })
             }else if(i>=21&&i<24){
-              axios.get("http://43.138.12.177:12100/image/" +list[i].imageId)
+              axios.get("http://localhost:12100/image/" +list[i].imageId)
                   .then((response)=>{
                     let d=response.data
                     let url=d.data.url;
