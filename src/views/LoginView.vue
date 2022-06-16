@@ -16,14 +16,14 @@ export default {
 
 <style scoped>
 .background{
-  width: 2560px;
-  height: 1600px;
-  background: url("../assets/login.jpg");
+  width: 1920px;
+  height: 1440px;
+  background-size: 100% 100%;
+  background: url("../assets/login.jpg") no-repeat;
 }
 .el-card{
-  width: 25%;
+  width: 30%;
   height: 30%;
-  margin-left: 20%;
-  margin-top: 5%
+  margin: 10% auto 0;
 }
 </style>

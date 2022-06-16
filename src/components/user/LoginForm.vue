@@ -54,22 +54,21 @@ export default {
 
 <style scoped>
 .item{
-  width: 60%;
-  margin-top: 5%;
-  margin-left: 12.5%;
+  width: 85%;
+  margin-top: 3%;
 }
 .item-button{
-  margin-top: 5%;
-  margin-left: 27%;
+  margin-top: 1%;
+  margin-left: 24%;
 }
 .register{
   margin-top: 1%;
-  margin-left: 30%;
+  margin-left: 27.5%;
 }
 .icon{
   font-size: 100px;
   font-family:Gabriola,serif;
-  margin-left: 37.5%;
+  margin-left: 36%;
   margin-top: 2%
 }
 </style>

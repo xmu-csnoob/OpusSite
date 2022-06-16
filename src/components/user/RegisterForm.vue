@@ -33,7 +33,7 @@ export default {
   },
   methods:{
     register:function (){
-      axios.post("http://121.37.149.40:12345/register",this.form)
+      axios.post("http://localhost:12345/register",this.form)
           .then((response)=>{
             const state=response.data.errMsg;
             if(state==='Success'){

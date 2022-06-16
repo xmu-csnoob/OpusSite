@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div style="display: inline;float: left">
-      <span style="font-family: Gabriola,serif;font-size: 20px">Opus</span>
+      <span style="font-family: Gabriola,serif;font-size: 30px">Opus</span>
     </div>
     <div style="display: inline;float: right">
       <router-link to="/" style="color: black;font-size: 20px" v-if="isLogin">主页</router-link>
@@ -49,5 +49,7 @@ export default {
 </script>
 
 <style scoped>
-
+.header{
+  background-color: black;
+}
 </style>
