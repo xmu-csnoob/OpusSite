@@ -1,11 +1,13 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import SearchView from "@/views/SearchView";
-import ArtworkView from "@/views/ArtworkView";
-import ArtworkPostView from "@/views/ArtworkPostView";
-import LoginView from "@/views/LoginView";
-import RegisterView from "@/views/RegisterView";
-import UserMainPageView from "@/views/UserMainPageView";
+import HomeView from '../views/user/HomeView.vue'
+import SearchView from "@/views/artwork/SearchView";
+import ArtworkView from "@/views/artwork/ArtworkView";
+import ArtworkPostView from "@/views/artwork/ArtworkPostView";
+import LoginView from "@/views/user/LoginView";
+import RegisterView from "@/views/user/RegisterView";
+import UserMainPageView from "@/views/user/UserMainPageView";
+import TestView from "@/views/TestView";
+import CategoryView from "@/views/category/CategoryView";
 const routes = [
   {
     path:'/',
@@ -45,6 +47,16 @@ const routes = [
     path:'/user',
     name:'User',
     component: UserMainPageView
+  },
+  {
+    path: '/category',
+    name:'Category',
+    component: CategoryView
+  },
+  {
+    path: '/test',
+    name:'Test',
+    component: TestView
   }
 ]
 

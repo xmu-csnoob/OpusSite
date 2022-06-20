@@ -1,15 +1,15 @@
 <template>
   <div class="screen">
-    <el-image :src="url" :preview-src-list="[url]">
-
-    </el-image>
+    <image-container :src="url" :preview="[url]"/>
   </div>
 </template>
 
 <script>
 
+import ImageContainer from "@/components/image/ImageContainer";
 export default {
   name: "ImageScreen",
+  components: {ImageContainer},
   props:["url"],
   data(){
     return{

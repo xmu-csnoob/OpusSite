@@ -6,10 +6,13 @@ import ElementPlus from 'element-plus'
 import 'element-plus/lib/theme-chalk/index.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import Vuex from 'vuex'
 axios.defaults.timeout = 50000
 const app = createApp(App).use(router)
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+    app.component(key, component)
+}
 installElementPlus(app)
 app.use(Vuex)
 app.use(ElementPlus);

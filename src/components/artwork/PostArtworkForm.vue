@@ -15,7 +15,7 @@
       <input type="file" ref="file" v-on:change="showImage()"/>
     </el-form-item>
     <el-form-item label="图片预览" style="width: 30%;height: 10%">
-      <el-image :src="form.url" style="transform: scale(0.3)"/>
+      <image-preview :src="form.url"/>
     </el-form-item>
     <el-form-item>
       <el-button @click="submit()">提交</el-button>
@@ -26,9 +26,11 @@
 <script>
 import { reactive } from 'vue'
 import axios from "axios";
+import ImagePreview from "@/components/image/ImagePreview";
 
 export default {
   name: "PostArtworkForm",
+  components: {ImagePreview},
   data(){
     return{
       form :reactive({

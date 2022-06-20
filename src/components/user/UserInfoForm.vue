@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="avatar">
     <el-avatar shape="square" :size="150" :src="avatarUrl"/>
   </div>
-  <div>
+  <div class="btn">
     <el-upload round="round"
                style="margin-left: 45%;margin-top: 5%;font-size: 5px;font-weight: lighter;"
                ref="upload"
@@ -13,13 +13,16 @@
                :show-file-list="false"
                limit="1">更换头像</el-upload>
   </div>
-  <el-descriptions border="border" column="1">
-    <el-descriptions-item label="用户名">{{username}}</el-descriptions-item>
-    <el-descriptions-item label="邮箱">Example@example.com</el-descriptions-item>
-    <el-descriptions-item label="作品">0</el-descriptions-item>
-    <el-descriptions-item label="点赞">0</el-descriptions-item>
-    <el-descriptions-item label="收藏">0</el-descriptions-item>
-  </el-descriptions>
+  <div class="description">
+    <el-descriptions border="border" column="1">
+      <el-descriptions-item label="用户名">{{username}}</el-descriptions-item>
+      <el-descriptions-item label="邮箱">Example@example.com</el-descriptions-item>
+      <el-descriptions-item label="作品">0</el-descriptions-item>
+      <el-descriptions-item label="点赞">0</el-descriptions-item>
+      <el-descriptions-item label="收藏">0</el-descriptions-item>
+    </el-descriptions>
+  </div>
+
 </template>
 
 <script>
@@ -64,5 +67,17 @@ export default {
 .el-avatar{
   margin-left: 37.5%;
   margin-top: 5%;
+}
+.avatar{
+  margin-top: 70px;
+}
+.description{
+  width: 80%;
+  height: 40%;
+  margin: 0 auto 80px;
+}
+.btn{
+  margin-bottom: 80px;
+  margin-top: 60px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <el-container>
+  <el-container style="background-color: #F4F4F4;">
     <el-header>
-      <NonLoginHeader ref="header" :key="new Date().getTime()"/>
+      <NonLoginHeader ref="header" v-if="!this.$route.path.includes('login')" :key="new Date().getTime()"/>
     </el-header>
     <router-view :key="new Date().getTime()"/>
   </el-container>

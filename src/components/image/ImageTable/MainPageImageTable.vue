@@ -1,20 +1,17 @@
 <template>
   <div class="image-table">
     <el-row gutter="4">
-      <el-col :span="8">
-        <div class="image">
-          <el-image v-for="image in image1" :key="image" :src="image.url" @click="jumpToPage(image.artworkId)" fit="scale-down" :preview-src-list="urlList"/>
-        </div>
+      <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
+        <div class="grid-content ep-bg-purple"/>
+        <el-image v-for="image in image1" :key="image" :src="image.url" @click="jumpToPage(image.artworkId)" fit="scale-down" :preview-src-list="urlList"/>
       </el-col>
-      <el-col :span="8">
-        <div class="image">
-          <el-image v-for="image in image2" :key="image" :src="image.url" @click="jumpToPage(image.artworkId)" fit="scale-down" :preview-src-list="urlList"/>
-        </div>
+      <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
+        <div class="grid-content ep-bg-purple"/>
+        <el-image v-for="image in image2" :key="image" :src="image.url" @click="jumpToPage(image.artworkId)" fit="scale-down" :preview-src-list="urlList"/>
       </el-col>
-      <el-col :span="8">
-        <div class="image">
-          <el-image v-for="image in image3" :key="image" :src="image.url" @click="jumpToPage(image.artworkId)" fit="scale-down" :preview-src-list="urlList"/>
-        </div>
+      <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
+        <div class="grid-content ep-bg-purple"/>
+        <el-image v-for="image in image3" :key="image" :src="image.url" @click="jumpToPage(image.artworkId)" fit="scale-down" :preview-src-list="urlList"/>
       </el-col>
     </el-row>
   </div>
@@ -40,6 +37,7 @@ export default {
   created() {
     axios.get("http://localhost:12138/artwork/users/0?page=1&pageSize=15")
         .then((response)=>{
+          console.log(response);
           let data=response.data
           let list=data.data.list
           for (let i=0; i<list.length; i++){

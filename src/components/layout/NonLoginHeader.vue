@@ -4,7 +4,7 @@
       <span style="font-family: Gabriola,serif;font-size: 30px">Opus</span>
     </div>
     <div style="display: inline;float: right">
-      <router-link to="/" style="color: black;font-size: 20px" v-if="isLogin">主页</router-link>
+      <router-link to="/home" style="color: black;font-size: 20px" v-if="isLogin">主页</router-link>
       <el-divider v-if="isLogin" direction="vertical"/>
       <router-link to="/user" style="color: black;font-size: 20px" v-if="isLogin">用户主页</router-link>
       <el-divider v-if="isLogin" direction="vertical"/>

@@ -18,7 +18,7 @@ export default {
 .background{
   width: 2560px;
   height: 1600px;
-  background: url("../assets/login.jpg");
+  background: url("../../assets/login.jpg");
 }
 .el-card{
   width: 25%;

@@ -18,12 +18,12 @@ export default {
 .background{
   width: 2560px;
   height: 1600px;
-  background: url("../assets/login.jpg");
+  background: url("../../assets/login.jpg")no-repeat;
 }
 .el-card{
   width: 25%;
   height: 50%;
-  margin-left: 20%;
+  margin-left: 25%;
   margin-top: 5%
 }
 </style>

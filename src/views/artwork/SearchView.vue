@@ -2,8 +2,8 @@
   <div class="search">
     <el-input placeholder="搜索图片..." v-model="keyword"/>
   </div>
-  <div>
-    <span style="font-size: 30px;font-weight: bold">对于 {{this.$route.query.keyword}} 的搜索结果如下，</span>
+  <div class="intro">
+    <span style="font-size: 30px">对于 {{this.$route.query.keyword}} 的搜索结果如下</span>
   </div>
   <div class="image">
     <KeywordImageTable son :keyword="$route.query.keyword"/>
@@ -40,5 +40,12 @@ export default {
 </script>
 
 <style scoped>
-
+.search{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.intro{
+  margin: 0 auto 30px;
+  width: 400px;
+}
 </style>
